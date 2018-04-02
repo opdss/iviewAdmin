@@ -5,7 +5,7 @@ export const loginRouter = {
     path: '/login',
     name: 'login',
     meta: {
-        title: 'Login - 登录'
+        title: 'Login-登录'
     },
     component: () => import('@/views/login.vue')
 };
@@ -25,7 +25,7 @@ export const page403 = {
         title: '403-权限不足'
     },
     name: 'error-403',
-    component: () => import('@//views/error-page/403.vue')
+    component: () => import('@/views/error-page/403.vue')
 };
 
 export const page500 = {
@@ -66,27 +66,40 @@ export const otherRouter = {
 
 // 作为Main组件的子页面展示并且在左侧菜单显示的路由写在appRouter里
 export const appRouter = [
-    {
-        path: '/access',
-        icon: 'key',
-        name: 'access',
-        title: '权限管理',
-        component: Main,
-        children: [
-            { path: 'index', title: '权限管理', name: 'access_index', component: () => import('@/views/access/access.vue') }
-        ]
-    },
-    {
-        path: '/access-test',
-        icon: 'lock-combination',
-        title: '权限测试页',
-        name: 'accesstest',
-        access: 0,
-        component: Main,
-        children: [
-            { path: 'index', title: '权限测试页', name: 'accesstest_index', access: 0, component: () => import('@/views/access/access-test.vue') }
-        ]
-    },
+  {
+    path: '/system',
+    icon: 'ios-grid-view',
+    name: 'system',
+    title: '系统管理',
+    component: Main,
+    children: [
+      { path: 'access', title: '权限管理', name: 'access', icon: 'key', component: () => import('@/views/access/access.vue') },
+      { path: 'role', title: ' 角色管理', name: 'role', icon: 'key', component: () => import('@/views/system/role.vue') },
+      { path: 'config', title: '系统设置', name: 'config', icon: 'settings',access:1, component: () => import('@/views/access/access-test.vue') },
+      { path: 'user', title: '用户管理', name: 'user', icon: 'user',access:1, component: () => import('@/views/system/user.vue') }
+    ]
+  },
+  {
+    path: '/gushici',
+    icon: 'ios-grid-view',
+    name: 'gushici',
+    title: '古诗词',
+    component: Main,
+    children: [
+      { path: 'article', title: '诗词列表', name: 'article', icon: 'key',permission:'gushici.article', component: () => import('@/views/access/access-test.vue') },
+      { path: 'author', title: '诗词作者', name: 'author', icon: 'settings',permission:'gushici.author', component: () => import('@/views/access/access-test.vue') }
+    ]
+  },
+  {
+    path: '/qpic',
+    icon: 'ios-grid-view',
+    name: 'qpic',
+    title: '图床管理5',
+    component: Main,
+    children: [
+        { path: 'qpic_index', title: '图床管理', name: 'qpic_index', icon: 'key', component: () => import('@/views/qpic/qpic.vue') }
+    ]
+  },
     {
         path: '/international',
         icon: 'earth',
@@ -175,18 +188,18 @@ export const appRouter = [
 
         ]
     },
-    // {
-    //     path: '/charts',
-    //     icon: 'ios-analytics',
-    //     name: 'charts',
-    //     title: '图表',
-    //     component: Main,
-    //     children: [
-    //         { path: 'pie', title: '饼状图', name: 'pie', icon: 'ios-pie', component: resolve => { require('@/views/access/access.vue') },
-    //         { path: 'histogram', title: '柱状图', name: 'histogram', icon: 'stats-bars', component: resolve => { require('@/views/access/access.vue') }
+    /*{
+         path: '/charts',
+         icon: 'ios-analytics',
+         name: 'charts',
+         title: '图表',
+         component: Main,
+         children: [
+             { path: 'pie', title: '饼状图', name: 'pie', icon: 'ios-pie', component: resolve => { require('@/views/access/access.vue') },
+             { path: 'histogram', title: '柱状图', name: 'histogram', icon: 'stats-bars', component: resolve => { require('@/views/access/access.vue') }
 
-    //     ]
-    // },
+         ]
+    },*/
     {
         path: '/tables',
         icon: 'ios-grid-view',

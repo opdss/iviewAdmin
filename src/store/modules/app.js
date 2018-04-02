@@ -38,19 +38,25 @@ const app = {
             state.tagsList.push(...list);
         },
         updateMenulist (state) {
-            let accessCode = parseInt(Cookies.get('access'));
+            //let accessCode = parseInt(Cookies.get('access'));
             let menuList = [];
+            //let permissions = ['gushici.article'];
+            let permissions = [];
             appRouter.forEach((item, index) => {
-                if (item.access !== undefined) {
-                    if (Util.showThisRoute(item.access, accessCode)) {
+                //if (item.access !== undefined) {
+                if (item.permission !== undefined) {
+                    //if (Util.showThisRoute(item.access, accessCode)) {
+                    if (Util.oneOf(item.permission, permissions)) {
                         if (item.children.length === 1) {
                             menuList.push(item);
                         } else {
                             let len = menuList.push(item);
                             let childrenArr = [];
                             childrenArr = item.children.filter(child => {
-                                if (child.access !== undefined) {
-                                    if (child.access === accessCode) {
+                                //if (child.access !== undefined) {
+                                if (child.permission !== undefined) {
+                                    //if (child.access === accessCode) {
+                                    if (Util.oneOf(child.permission, permissions)) {
                                         return child;
                                     }
                                 } else {
@@ -67,8 +73,10 @@ const app = {
                         let len = menuList.push(item);
                         let childrenArr = [];
                         childrenArr = item.children.filter(child => {
-                            if (child.access !== undefined) {
-                                if (Util.showThisRoute(child.access, accessCode)) {
+                            //if (child.access !== undefined) {
+                            if (child.permission !== undefined) {
+                                //if (Util.showThisRoute(child.access, accessCode)) {
+                                if (Util.oneOf(child.permission, permissions)) {
                                     return child;
                                 }
                             } else {
