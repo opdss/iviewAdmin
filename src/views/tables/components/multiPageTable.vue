@@ -11,7 +11,7 @@
 <script>
     import EditableTable from './editableTable.vue';
     export default {
-        name: 'multiPageTable',
+        name: 'table-to-image1',
         components: {
             EditableTable
         },

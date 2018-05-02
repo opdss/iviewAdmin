@@ -52,9 +52,10 @@ const deleteButton = (vm, h, currentRow, index) => {
         },
         on: {
             'on-ok': () => {
+                let thisData = vm.thisTableData[index];
                 vm.thisTableData.splice(index, 1);
                 vm.$emit('input', vm.handleBackdata(vm.thisTableData));
-                vm.$emit('on-delete', vm.handleBackdata(vm.thisTableData), index);
+                vm.$emit('on-delete', vm.handleBackdata(vm.thisTableData), index, thisData);
             }
         }
     }, [

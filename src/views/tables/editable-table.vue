@@ -52,7 +52,7 @@
         <Row class="margin-top-10">
             <Col span="24">
                 <Card>
-                    <p slot="title">
+                    <p slot="title">showCurrentColumns
                         <Icon type="ios-keypad"></Icon>
                          单元行和单元格两种方式编辑(始终显示编辑单元格按钮)
                     </p>

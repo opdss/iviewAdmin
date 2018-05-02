@@ -205,7 +205,22 @@ export const editInlineAndCellData = [
         name: 'lisa',
         sex: '女',
         work: '程序员鼓励师'
-    }
+    },
+    {
+        name: 'lisas',
+        sex: '女',
+        work: '程序员鼓励师'
+    },
+    {
+        name: 'Lison',
+        sex: '男',
+        work: '前端开发'
+    },
+    {
+        name: 'lisa',
+        sex: '女',
+        work: '程序员鼓励师'
+    },
 ];
 
 export const showCurrentColumns = [

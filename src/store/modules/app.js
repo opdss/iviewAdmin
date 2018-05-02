@@ -40,8 +40,8 @@ const app = {
         updateMenulist (state) {
             //let accessCode = parseInt(Cookies.get('access'));
             let menuList = [];
-            //let permissions = ['gushici.article'];
-            let permissions = [];
+            let permissions = Cookies.get('permissions').split(',');
+            //let permissions = [];
             appRouter.forEach((item, index) => {
                 //if (item.access !== undefined) {
                 if (item.permission !== undefined) {

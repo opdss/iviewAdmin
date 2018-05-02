@@ -12,7 +12,7 @@ import util from './libs/util';
 Vue.use(VueI18n);
 Vue.use(iView);
 
-new Vue({
+var vm = new Vue({
     el: '#app',
     router: router,
     store: store,
@@ -42,3 +42,5 @@ new Vue({
         this.$store.commit('setTagsList', tagsList);
     }
 });
+
+export default vm
