@@ -129,6 +129,7 @@
         },
         methods: {
             getData() {
+                console.log(this.$route.title);
                 Util.ajax.get('/system/config').then((res) => {
                     this.tableData = res.data.data
                 })

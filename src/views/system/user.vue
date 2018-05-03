@@ -10,8 +10,9 @@
                 <Card>
                     <p slot="title">
                         <Icon type="ios-keypad"></Icon>
-                        单元行和单元格两种方式编辑(始终显示编辑单元格按钮)
+                        管理员列表
                     </p>
+                    <Button type="primary" slot="extra" @click="showCreateNewColumn = true">添加管理员</Button>
                     <Row :gutter="10">
                         <div class="edittable-table-height-con">
                             <can-edit-table
@@ -28,6 +29,36 @@
                 </Card>
             </Col>
         </Row>
+        <Modal :width="600" v-model="showCreateNewColumn" title="添加管理员" :loading="loading" @on-ok="handleCreate('newCloumn')">
+            <Row>
+                <Col span="24">
+                <Form ref="newCloumn" :model="newCloumn"  :label-width="80">
+                    <FormItem label="用户名" prop="username">
+                        <Input v-model="newCloumn.username"></Input>
+                    </FormItem>
+                    <FormItem label="密码" prop="password">
+                        <Input v-model="newCloumn.password"></Input>
+                    </FormItem>
+                    <FormItem label="重复密码" prop="repassword">
+                        <Input v-model="newCloumn.repassword"></Input>
+                    </FormItem>
+
+                    <FormItem label="电子邮箱" prop="email">
+                        <Input v-model="newCloumn.email"></Input>
+                    </FormItem>
+                    <FormItem label="手机号码" prop="mobile">
+                        <Input v-model="newCloumn.mobile"></Input>
+                    </FormItem>
+                    <Form-item label="状态">
+                                <Radio-group :model.sync="newCloumn.status">
+                                    <Radio value="1">正常</Radio>
+                                    <Radio value="0">禁用</Radio>
+                                </Radio-group>
+                    </Form-item>
+                </Form>
+                </Col>
+            </Row>
+        </Modal>
     </div>
 </template>
 
@@ -45,55 +76,62 @@
         tableColumns: [
           {
             title: 'UID',
-            width: 80,
             key: 'uid',
             align: 'center'
           },
           {
-            title: 'username',
-            align: 'center',
-            key: 'username',
-            width: 300
-          },
-          {
-            title: 'email',
-            align: 'center',
-            key: 'email',
-            editable: true
-          },
-          {
-            title: 'mobile',
-            align: 'center',
-            key: 'mobile',
-            editable: true
-          },
-          {
-            title: 'avatar',
+            title: '头像',
             align: 'center',
             key: 'avatar',
             render: (h, params) => {
-              return h('Img', {
+              return h('Avatar', {
                 props : {
-                  class : params.row.avatar
+                  src : params.row.avatar
                 }
               })
             }
           },
           {
-            title: 'role',
+            title: '用户名',
             align: 'center',
-            key: 'role'
+            key: 'username',
           },
           {
-            title: 'role',
+            title: '邮箱',
+            align: 'center',
+            key: 'email',
+            editable: true
+          },
+          {
+            title: '电话',
+            align: 'center',
+            key: 'mobile',
+            editable: true
+          },
+          {
+            title: '角色组',
+            align: 'center',
+            key: 'rid'
+          },
+          {
+            title: '最后登陆时间',
+            align: 'center',
+            key: 'last_login_time'
+          },
+          {
+            title: '操作',
             align: 'center',
             key: 'handle',
             handle: ['edit', 'delete']
           }
         ],
         tableData: [],
-        showCurrentColumns: [],
-        showCurrentTableData: false
+        newCloumn : {
+            'username' : '',
+            'status' : '1'
+        },
+        showCreateNewColumn: false,
+        loading: true
       }
     },
     methods: {
@@ -102,46 +140,33 @@
           this.tableData = res.data.data
         })
       },
-      handleNetConnect (state) {
-        this.breakConnect = state
-      },
-      handleLowSpeed (state) {
-        this.lowNetSpeed = state
-      },
-      getCurrentData () {
-        this.showCurrentTableData = true
-      },
-      handleDelete (val, index) {
-        Util.ajax.delete('/system/user/'+val[index].uid).then((res) => {
+      handleDelete (val, index, current) {
+        Util.ajax.delete('/system/user/'+current.uid).then((res) => {
           if (res.data.errCode == 0) {
-            this.$Message.success('成功删除了第' + (index + 1) + '行数据')
-          } else {
-            this.$Message.error('删除失败！')
+            this.$Message.success('成功删除了UID:' + current.uid + '的数据')
           }
         })
       },
       handleCellChange (val, index, key) {
         let _data = {};
+        let uid = val[index].uid;
         _data[key] = val[index][key];
-        Util.ajax.put('/system/user/'+val[index].uid, {data:_data}).then((res) => {
+        Util.ajax.put('/system/user/'+uid, {data:_data}).then((res) => {
           if (res.data.errCode == 0) {
-            this.$Message.success('成功修改了第' + (index + 1) + '行数据')
-          } else {
-            this.$Message.error('删除失败！')
+            this.$Message.success('成功修改了UID:' + uid + '的数据')
           }
         })
-        console.log(val, index, key)
-        this.$Message.success('修改了第 ' + (index + 1) + ' 行列名为 ' + key + ' 的数据')
       },
       handleChange (val, index) {
-        Util.ajax.put('/system/user/'+val[index].uid, {data:val[index]}).then((res) => {
+        let uid = val[index].uid;
+        Util.ajax.put('/system/user/'+uid, {data:val[index]}).then((res) => {
           if (res.data.errCode == 0) {
-            this.$Message.success('成功修改了第' + (index + 1) + '行数据')
-          } else {
-            this.$Message.error('修改失败！')
+            this.$Message.success('成功修改了UID:' + uid + '的数据')
           }
         })
       }
+    },
+    handleCreate (name) {
     },
     created () {
       this.getData()
