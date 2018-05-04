@@ -18,7 +18,7 @@ fs.open('./build/env.js', 'w', function(err, fd) {
 
 module.exports = merge(webpackBaseConfig, {
     output: {
-        publicPath: 'http://localhost/dist/',  // 修改 https://iv...admin 这部分为你的服务器域名
+        publicPath: 'http://admin.1tools.net/dist/',  // 修改 https://iv...admin 这部分为你的服务器域名
         filename: '[name].[hash].js',
         chunkFilename: '[name].[hash].chunk.js'
     },
@@ -64,7 +64,7 @@ module.exports = merge(webpackBaseConfig, {
                 to: 'fonts'
             },
             {
-                from: 'src/views/main-components/theme-switch/theme'
+                from: 'src/views/main/theme-switch/theme'
             },
             {
                 from: 'src/views/my-components/text-editor/tinymce'

@@ -34,7 +34,7 @@
                     <FormItem label="配置名称" prop="title">
                         <Input v-model="newCloumn.title"></Input>
                     </FormItem>
-                    <FormItem label="键名" prop="key">
+                    <FormItem label="键名" prop="key"  :required="true">
                         <Input v-model="newCloumn.key" placeholder="创建后不可修改"></Input>
                     </FormItem>
                     <FormItem label="键值" prop="val">
@@ -76,7 +76,8 @@
                         title: 'ID',
                         width: 80,
                         key: 'id',
-                        align: 'center'
+                        align: 'center',
+                        sortable: true
                     },
                     {
                         title: '名称',
@@ -89,17 +90,20 @@
                         title: '键名',
                         align: 'center',
                         key: 'key',
+                        sortable: true
                     },
                     {
                         title: '键值',
                         align: 'center',
                         key: 'val',
-                        editable: true
+                        editable: true,
+                        sortable: true
                     },
                     {
                         title: '最后更新时间',
                         align: 'center',
                         key: 'updated_at',
+                        sortable: true
                     },
                     {
                         title: '操作',

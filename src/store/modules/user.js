@@ -5,7 +5,6 @@ const user = {
     mutations: {
         logout (state, vm) {
             Cookies.remove('user');
-            Cookies.remove('password');
             Cookies.remove('access');
             Cookies.remove('Authorization');
             // 恢复默认样式
@@ -20,6 +19,14 @@ const user = {
             if (theme) {
                 localStorage.theme = theme;
             }
+        },
+        login (state, data) {
+            console.log('store.login');
+            console.log(data)
+            Cookies.set('Authorization', data.Authorization)
+            Cookies.set('user', data.user.username)
+            Cookies.set('permissions', data.user.permissions.toString())
+            localStorage.permissions = data.user.permissions.toString();
         }
     }
 };

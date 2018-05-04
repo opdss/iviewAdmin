@@ -30,12 +30,13 @@
                             <Button @click="handleSubmit" type="primary" long>登录</Button>
                         </FormItem>
                     </Form>
-                    <p class="login-tip">输入任意用户名和密码即可</p>
+                    <p class="login-tip">忘记密码请联系管理员</p>
                 </div>
             </Card>
         </div>
     </div>
 </template>
+
 
 <script>
     import Cookies from 'js-cookie'
@@ -68,22 +69,15 @@
                             if (res.data.errCode == 0) {
                                 let data = res.data.data;
                                 Util.ajax.defaults.headers.common['Authorization'] = data.Authorization;
-                                console.log(Util.ajax.defaults);
-                                Cookies.set('Authorization', data.Authorization)
-                                Cookies.set('user', data.user.username)
-                                Cookies.set('password', data.user.password)
+                                this.$store.commit('login', data)
                                 this.$store.commit('setAvator', data.user.avatar)
-                                //this.$store.commit('permissions', data.user.permissions.toString())
-                                Cookies.set('permissions', data.user.permissions.toString())
                                 this.$router.push({
                                     name: 'home_index'
                                 })
-                            } else {
-
                             }
-                        }).catch(function (error) {
-                                console.log(error)
                         })
+                    } else {
+                        this.$Message.error('请检查用户名或者密码在提交！');
                     }
                 })
             }
