@@ -54,18 +54,19 @@
                         <div class="margin-left-10">
 
                             <img :src="uploadAvatar" style="height: 160px;width: 160px;">
-                            <div class="admin-upload-list-cover">
-                                <Upload ref="uploadAvatar"
-                                        :show-upload-list="false"
-                                        :headers="uploadHeaders"
-                                        :on-success="uploadSuccess"
-                                        :format="['jpg','jpeg','png','gif','bmp']"
-                                        action="http://admin.api.1tools.net/upload/avatar"
-                                >
-                                    <p>点击上传头像</p>
-                                </Upload>
-                                <span @click="uploadRemove">删除</span>
-                            </div>
+
+    <Button-group>
+        <i-button type="ghost"><Upload ref="uploadAvatar"
+                                                                       :show-upload-list="false"
+                                                                       :headers="uploadHeaders"
+                                                                       :on-success="uploadSuccess"
+                                                                       :format="['jpg','jpeg','png','gif','bmp']"
+                                                                       action="http://admin.api.1tools.net/upload/avatar"
+                                                               >
+                                                                   <p>上传头像</p>
+                                                               </Upload></i-button>
+        <i-button type="ghost" @click="uploadRemove">删除</i-button>
+    </Button-group>
                             <!--<div>
                                 <img v-if="uploadAvatar" :src="uploadAvatar" style="height: 160px;width: 160px;">
                                 <div class="admin-upload-list-cover">
@@ -113,6 +114,9 @@
                             </Option>
                         </Select>
                     </Form-item>
+                    <Form-item label="选择权限">
+                        <Permission :paramOpts="{uid:1}"></Permission>
+                    </Form-item>
                 </Form>
                 </Col>
             </Row>
@@ -122,13 +126,15 @@
 
 <script>
     import canEditTable from '../../components/tables/canEditTable.vue'
+    import Permission from './permission.vue'
     import Util from '@/libs/util'
     import Cookies from 'js-cookie'
 
     export default {
         name: 'editable-table',
         components: {
-            canEditTable
+            canEditTable,
+            Permission
         },
         data() {
 

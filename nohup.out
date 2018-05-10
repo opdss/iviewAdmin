@@ -331,3 +331,344 @@ webpack output is served from [1m[34m/dist/[39m[22m
 Content not from webpack is served from [1m[34m/data/www/wuxin/iview-admin[39m[22m
 Happy[happybabel]: All set; signaling webpack to proceed.
 Unable to open browser. If you are running in a headless environment, please do not use the open flag.
+
+> iview-admin@1.3.1 dev /data/www/wuxin/iview-admin
+> webpack-dev-server --content-base ./ --open --inline --hot --host 0.0.0.0 --compress --config build/webpack.dev.config.js
+
+Happy[happybabel]: Version: 4.0.1. Threads: 1 (shared pool)
+Project is running at [1m[34mhttp://0.0.0.0:8080/[39m[22m
+webpack output is served from [1m[34m/dist/[39m[22m
+Content not from webpack is served from [1m[34m/data/www/wuxin/iview-admin[39m[22m
+Happy[happybabel]: All set; signaling webpack to proceed.
+Unable to open browser. If you are running in a headless environment, please do not use the open flag.
+Hash: [1mc0058b67fc3891205054[39m[22m
+Version: webpack [1m3.11.0[39m[22m
+Time: [1m40084[39m[22mms
+                                         [1mAsset[39m[22m       [1mSize[39m[22m         [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m       [1mChunk Names[39m[22m
+         [1m[32mplugins/emoticons/img/smiley-cool.gif[39m[22m  354 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32m2c2ae068be3b089e0a5b59abb1831550.eot[39m[22m     121 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+         [1m[32m05acfdb568b3df49ad31355b19495d4a.woff[39m[22m    67.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[33m621bd386841f74e0053cb8e67f8a0604.svg[39m[22m     [1m[33m334 kB[39m[22m               [1m[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+          [1m[32m9f35d093728efc834cf6f8b15fd17eea.jpg[39m[22m    3.32 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32ma4c08dc74960bea369ebde67454d8e77.png[39m[22m     167 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[33m0.chunk.js[39m[22m    [1m[33m2.16 MB[39m[22m              [1m0[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+                                    [1m[33m1.chunk.js[39m[22m     [1m[33m628 kB[39m[22m              [1m1[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+                                    [1m[32m2.chunk.js[39m[22m    32.2 kB  [1m2, 31, 32, 33[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[32m3.chunk.js[39m[22m    33.3 kB          [1m3, 22[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[32m4.chunk.js[39m[22m    20.7 kB              [1m4[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[32m5.chunk.js[39m[22m     127 kB              [1m5[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[32m6.chunk.js[39m[22m    18.3 kB              [1m6[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[32m7.chunk.js[39m[22m    35.1 kB              [1m7[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[32m8.chunk.js[39m[22m    30.4 kB              [1m8[39m[22m  [1m[32m[emitted][39m[22m         
+                                    [1m[32m9.chunk.js[39m[22m      35 kB              [1m9[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m10.chunk.js[39m[22m    56.6 kB             [1m10[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m11.chunk.js[39m[22m    26.5 kB             [1m11[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m12.chunk.js[39m[22m    25.5 kB             [1m12[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[33m13.chunk.js[39m[22m     [1m[33m918 kB[39m[22m             [1m13[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+                                   [1m[32m14.chunk.js[39m[22m    18.6 kB             [1m14[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m15.chunk.js[39m[22m    10.4 kB             [1m15[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m16.chunk.js[39m[22m    10.4 kB             [1m16[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m17.chunk.js[39m[22m    13.8 kB             [1m17[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m18.chunk.js[39m[22m    51.7 kB             [1m18[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[33m19.chunk.js[39m[22m     [1m[33m935 kB[39m[22m             [1m19[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+                                   [1m[33m20.chunk.js[39m[22m     [1m[33m936 kB[39m[22m             [1m20[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+                                   [1m[32m21.chunk.js[39m[22m    14.1 kB             [1m21[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m22.chunk.js[39m[22m    15.6 kB             [1m22[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m23.chunk.js[39m[22m    9.69 kB             [1m23[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m24.chunk.js[39m[22m    12.2 kB             [1m24[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m25.chunk.js[39m[22m    17.8 kB             [1m25[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m26.chunk.js[39m[22m    16.5 kB             [1m26[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m27.chunk.js[39m[22m    18.7 kB             [1m27[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m28.chunk.js[39m[22m    9.94 kB             [1m28[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m29.chunk.js[39m[22m    11.3 kB             [1m29[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m30.chunk.js[39m[22m      11 kB             [1m30[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m31.chunk.js[39m[22m     7.7 kB             [1m31[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m32.chunk.js[39m[22m    7.23 kB             [1m32[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m33.chunk.js[39m[22m     8.1 kB             [1m33[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m34.chunk.js[39m[22m    7.72 kB             [1m34[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m35.chunk.js[39m[22m    8.17 kB             [1m35[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m36.chunk.js[39m[22m    7.76 kB             [1m36[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m37.chunk.js[39m[22m    5.39 kB             [1m37[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32m38.chunk.js[39m[22m    6.87 kB             [1m38[39m[22m  [1m[32m[emitted][39m[22m         
+                                       [1m[33mmain.js[39m[22m     [1m[33m299 kB[39m[22m             [1m39[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  main
+                               [1m[33mvender-exten.js[39m[22m     [1m[33m297 kB[39m[22m             [1m40[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  vender-exten
+                                [1m[33mvender-base.js[39m[22m    [1m[33m2.16 MB[39m[22m             [1m41[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  vender-base
+                                      [1m[32mmain.css[39m[22m     238 kB             [1m39[39m[22m  [1m[32m[emitted][39m[22m         main
+                                [1m[32m0.chunk.js.map[39m[22m    2.75 MB              [1m0[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m1.chunk.js.map[39m[22m     782 kB              [1m1[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m2.chunk.js.map[39m[22m    61.2 kB  [1m2, 31, 32, 33[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m3.chunk.js.map[39m[22m    59.4 kB          [1m3, 22[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m4.chunk.js.map[39m[22m    42.8 kB              [1m4[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m5.chunk.js.map[39m[22m     211 kB              [1m5[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m6.chunk.js.map[39m[22m    34.2 kB              [1m6[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m7.chunk.js.map[39m[22m    67.6 kB              [1m7[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m8.chunk.js.map[39m[22m    47.4 kB              [1m8[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32m9.chunk.js.map[39m[22m      62 kB              [1m9[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m10.chunk.js.map[39m[22m    86.4 kB             [1m10[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m11.chunk.js.map[39m[22m    60.7 kB             [1m11[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m12.chunk.js.map[39m[22m    58.3 kB             [1m12[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m13.chunk.js.map[39m[22m     1.1 MB             [1m13[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m14.chunk.js.map[39m[22m    28.2 kB             [1m14[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m15.chunk.js.map[39m[22m    21.8 kB             [1m15[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m16.chunk.js.map[39m[22m    21.7 kB             [1m16[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m17.chunk.js.map[39m[22m    28.5 kB             [1m17[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m18.chunk.js.map[39m[22m    85.3 kB             [1m18[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m19.chunk.js.map[39m[22m     1.1 MB             [1m19[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m20.chunk.js.map[39m[22m    1.16 MB             [1m20[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m21.chunk.js.map[39m[22m    24.7 kB             [1m21[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m22.chunk.js.map[39m[22m    20.2 kB             [1m22[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m23.chunk.js.map[39m[22m    28.5 kB             [1m23[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m24.chunk.js.map[39m[22m    27.2 kB             [1m24[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m25.chunk.js.map[39m[22m    40.2 kB             [1m25[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m26.chunk.js.map[39m[22m      52 kB             [1m26[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m27.chunk.js.map[39m[22m    34.6 kB             [1m27[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m28.chunk.js.map[39m[22m    26.7 kB             [1m28[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m29.chunk.js.map[39m[22m    22.7 kB             [1m29[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m30.chunk.js.map[39m[22m    27.3 kB             [1m30[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m31.chunk.js.map[39m[22m    13.1 kB             [1m31[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m32.chunk.js.map[39m[22m    12.1 kB             [1m32[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m33.chunk.js.map[39m[22m    13.6 kB             [1m33[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m34.chunk.js.map[39m[22m      13 kB             [1m34[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m35.chunk.js.map[39m[22m    12.6 kB             [1m35[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m36.chunk.js.map[39m[22m    12.6 kB             [1m36[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m37.chunk.js.map[39m[22m    7.07 kB             [1m37[39m[22m  [1m[32m[emitted][39m[22m         
+                               [1m[32m38.chunk.js.map[39m[22m    9.32 kB             [1m38[39m[22m  [1m[32m[emitted][39m[22m         
+                                   [1m[32mmain.js.map[39m[22m     423 kB             [1m39[39m[22m  [1m[32m[emitted][39m[22m         main
+                                  [1m[32mmain.css.map[39m[22m   85 bytes             [1m39[39m[22m  [1m[32m[emitted][39m[22m         main
+                           [1m[32mvender-exten.js.map[39m[22m     361 kB             [1m40[39m[22m  [1m[32m[emitted][39m[22m         vender-exten
+                            [1m[32mvender-base.js.map[39m[22m    2.57 MB             [1m41[39m[22m  [1m[32m[emitted][39m[22m         vender-base
+                                 [1m[32m../index.html[39m[22m  133 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                                         [1m[32my.css[39m[22m     212 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                                         [1m[32mg.css[39m[22m     212 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                                         [1m[32mr.css[39m[22m     212 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                      [1m[32mplugins/advlist/index.js[39m[22m  206 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/advlist/plugin.js[39m[22m    11.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                         [1m[32mlangs/zh_CN.GB2312.js[39m[22m      11 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                                [1m[32mlangs/en_GB.js[39m[22m    8.35 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                      [1m[32mplugins/anchor/plugin.js[39m[22m    9.29 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/anchor/plugin.min.js[39m[22m    3.08 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/anchor/index.js[39m[22m  203 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/advlist/plugin.min.js[39m[22m    4.13 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/autolink/index.js[39m[22m  209 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/autoresize/index.js[39m[22m  215 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/autolink/plugin.min.js[39m[22m       4 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/autolink/plugin.js[39m[22m    12.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/autosave/index.js[39m[22m  209 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+              [1m[32mplugins/autoresize/plugin.min.js[39m[22m     4.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/autosave/plugin.js[39m[22m    16.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/autoresize/plugin.js[39m[22m      13 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/bbcode/index.js[39m[22m  203 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/bbcode/plugin.min.js[39m[22m    4.18 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/autosave/plugin.min.js[39m[22m    5.58 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                      [1m[32mplugins/bbcode/plugin.js[39m[22m    8.65 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                      [1m[32mplugins/charmap/index.js[39m[22m  206 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                         [1m[32mplugins/code/index.js[39m[22m  197 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/charmap/plugin.min.js[39m[22m    11.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/charmap/plugin.js[39m[22m    24.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+              [1m[32mplugins/codesample/css/prism.css[39m[22m    2.33 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/code/plugin.min.js[39m[22m    2.62 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/codesample/index.js[39m[22m  215 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/code/plugin.js[39m[22m    8.93 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/colorpicker/index.js[39m[22m  218 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+              [1m[32mplugins/codesample/plugin.min.js[39m[22m    23.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/colorpicker/plugin.js[39m[22m    8.31 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/contextmenu/index.js[39m[22m  218 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mplugins/colorpicker/plugin.min.js[39m[22m    2.65 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/codesample/plugin.js[39m[22m    49.5 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/contextmenu/plugin.js[39m[22m    30.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mplugins/contextmenu/plugin.min.js[39m[22m    9.87 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/directionality/index.js[39m[22m  227 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+              [1m[32mplugins/directionality/plugin.js[39m[22m    7.28 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mplugins/directionality/plugin.min.js[39m[22m    2.23 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32m24712f6c47821394fba7942fbb52c3b2.ttf[39m[22m     189 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mplugins/emoticons/img/smiley-cry.gif[39m[22m  329 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+   [1m[32mplugins/emoticons/img/smiley-embarassed.gif[39m[22m  331 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+[1m[32mplugins/emoticons/img/smiley-foot-in-mouth.gif[39m[22m  342 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+        [1m[32mplugins/emoticons/img/smiley-frown.gif[39m[22m  340 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+     [1m[32mplugins/emoticons/img/smiley-innocent.gif[39m[22m  336 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+         [1m[32mplugins/emoticons/img/smiley-kiss.gif[39m[22m  338 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+     [1m[32mplugins/emoticons/img/smiley-laughing.gif[39m[22m  343 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+  [1m[32mplugins/emoticons/img/smiley-money-mouth.gif[39m[22m  321 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+       [1m[32mplugins/emoticons/img/smiley-sealed.gif[39m[22m  323 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+        [1m[32mplugins/emoticons/img/smiley-smile.gif[39m[22m  344 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+         [1m[32mplugins/emoticons/img/smiley-wink.gif[39m[22m  350 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+   [1m[32mplugins/emoticons/img/smiley-tongue-out.gif[39m[22m  328 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+    [1m[32mplugins/emoticons/img/smiley-surprised.gif[39m[22m  338 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+    [1m[32mplugins/emoticons/img/smiley-undecided.gif[39m[22m  337 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+         [1m[32mplugins/emoticons/img/smiley-yell.gif[39m[22m  336 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/emoticons/index.js[39m[22m  212 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/emoticons/plugin.js[39m[22m    7.15 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/emoticons/plugin.min.js[39m[22m    2.39 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/fullpage/index.js[39m[22m  209 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/fullscreen/index.js[39m[22m  215 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/fullpage/plugin.min.js[39m[22m    10.5 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/fullpage/plugin.js[39m[22m    28.5 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+              [1m[32mplugins/fullscreen/plugin.min.js[39m[22m    4.08 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/fullscreen/plugin.js[39m[22m    12.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                         [1m[32mplugins/help/index.js[39m[22m  197 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/help/img/logo.png[39m[22m    23.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/help/plugin.js[39m[22m    45.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                          [1m[32mplugins/hr/plugin.js[39m[22m    5.15 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                           [1m[32mplugins/hr/index.js[39m[22m  191 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/help/plugin.min.js[39m[22m    17.4 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                      [1m[32mplugins/hr/plugin.min.js[39m[22m    1.63 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/image/index.js[39m[22m  200 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/image/plugin.js[39m[22m    46.6 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/image/plugin.min.js[39m[22m    16.2 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/imagetools/index.js[39m[22m  215 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/importcss/index.js[39m[22m  212 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/importcss/plugin.js[39m[22m    17.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+              [1m[32mplugins/imagetools/plugin.min.js[39m[22m    49.8 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/insertdatetime/index.js[39m[22m  227 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/importcss/plugin.min.js[39m[22m    5.55 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/imagetools/plugin.js[39m[22m     130 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mplugins/insertdatetime/plugin.min.js[39m[22m    5.54 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+              [1m[32mplugins/insertdatetime/plugin.js[39m[22m    14.5 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/legacyoutput/index.js[39m[22m  221 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                         [1m[32mplugins/link/index.js[39m[22m  197 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+            [1m[32mplugins/legacyoutput/plugin.min.js[39m[22m    4.97 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/legacyoutput/plugin.js[39m[22m    12.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/link/plugin.js[39m[22m    38.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/lists/index.js[39m[22m  200 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/link/plugin.min.js[39m[22m    13.5 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/media/index.js[39m[22m  200 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/lists/plugin.min.js[39m[22m    19.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/lists/plugin.js[39m[22m    57.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/nonbreaking/index.js[39m[22m  218 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/nonbreaking/plugin.js[39m[22m    8.28 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/media/plugin.js[39m[22m    61.8 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mplugins/nonbreaking/plugin.min.js[39m[22m    2.47 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/media/plugin.min.js[39m[22m    21.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/noneditable/index.js[39m[22m  218 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/noneditable/plugin.js[39m[22m    9.77 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mplugins/noneditable/plugin.min.js[39m[22m    3.15 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/pagebreak/plugin.min.js[39m[22m    3.18 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/pagebreak/plugin.js[39m[22m    10.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/pagebreak/index.js[39m[22m  212 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/paste/index.js[39m[22m  200 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                      [1m[32mplugins/preview/index.js[39m[22m  206 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/paste/plugin.min.js[39m[22m    28.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/preview/plugin.js[39m[22m    11.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/print/index.js[39m[22m  200 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/preview/plugin.min.js[39m[22m    3.68 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/print/plugin.js[39m[22m    5.09 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                         [1m[32mplugins/save/index.js[39m[22m  197 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/print/plugin.min.js[39m[22m    1.56 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/paste/plugin.js[39m[22m    97.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/save/plugin.js[39m[22m     9.7 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/save/plugin.min.js[39m[22m    3.09 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/searchreplace/index.js[39m[22m  224 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/spellchecker/index.js[39m[22m  221 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/searchreplace/plugin.js[39m[22m    31.8 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+           [1m[32mplugins/searchreplace/plugin.min.js[39m[22m    10.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/spellchecker/plugin.js[39m[22m    46.7 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/tabfocus/index.js[39m[22m  209 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+            [1m[32mplugins/spellchecker/plugin.min.js[39m[22m    14.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/tabfocus/plugin.js[39m[22m    11.2 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/tabfocus/plugin.min.js[39m[22m    3.18 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mplugins/table/index.js[39m[22m  200 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/template/index.js[39m[22m  209 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/template/plugin.js[39m[22m    24.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/template/plugin.min.js[39m[22m    9.05 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/table/plugin.min.js[39m[22m    57.5 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/textcolor/index.js[39m[22m  212 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/textcolor/plugin.js[39m[22m    18.8 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/textpattern/index.js[39m[22m  218 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/textcolor/plugin.min.js[39m[22m    7.25 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                       [1m[32mplugins/table/plugin.js[39m[22m     171 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/textpattern/plugin.js[39m[22m    21.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mplugins/textpattern/plugin.min.js[39m[22m    6.99 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                          [1m[32mplugins/toc/index.js[39m[22m  194 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                         [1m[32mplugins/toc/plugin.js[39m[22m    15.4 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                     [1m[32mplugins/toc/plugin.min.js[39m[22m    5.25 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+     [1m[32mplugins/visualblocks/css/visualblocks.css[39m[22m    5.47 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mplugins/visualblocks/plugin.js[39m[22m    12.4 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/visualblocks/index.js[39m[22m  221 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+            [1m[32mplugins/visualblocks/plugin.min.js[39m[22m    3.67 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mplugins/visualchars/index.js[39m[22m  218 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mplugins/visualchars/plugin.min.js[39m[22m    12.2 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mplugins/visualchars/plugin.js[39m[22m    35.7 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mplugins/wordcount/index.js[39m[22m  212 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+        [1m[32mskins/lightgray/content.inline.min.css[39m[22m    3.46 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mplugins/wordcount/plugin.min.js[39m[22m    13.6 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                   [1m[32mplugins/wordcount/plugin.js[39m[22m    27.9 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+               [1m[32mskins/lightgray/content.min.css[39m[22m    3.87 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+        [1m[32mskins/lightgray/content.mobile.min.css[39m[22m  234 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+     [1m[32mskins/lightgray/fonts/tinymce-mobile.woff[39m[22m    4.62 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+       [1m[32mskins/lightgray/fonts/tinymce-small.eot[39m[22m    9.49 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+       [1m[32mskins/lightgray/fonts/tinymce-small.ttf[39m[22m     9.3 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+      [1m[32mskins/lightgray/fonts/tinymce-small.woff[39m[22m    9.38 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mskins/lightgray/fonts/tinymce.eot[39m[22m    17.6 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+       [1m[32mskins/lightgray/fonts/tinymce-small.svg[39m[22m    24.7 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mskins/lightgray/fonts/tinymce.svg[39m[22m      46 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+             [1m[32mskins/lightgray/fonts/tinymce.ttf[39m[22m    17.4 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+            [1m[32mskins/lightgray/fonts/tinymce.woff[39m[22m    17.5 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mskins/lightgray/img/anchor.gif[39m[22m   53 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mskins/lightgray/img/loader.gif[39m[22m    2.61 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                [1m[32mskins/lightgray/img/object.gif[39m[22m  152 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                 [1m[32mskins/lightgray/img/trans.gif[39m[22m   43 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mthemes/inlite/index.js[39m[22m  199 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+           [1m[32mskins/lightgray/skin.mobile.min.css[39m[22m    28.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                  [1m[32mskins/lightgray/skin.min.css[39m[22m    43.1 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[32mthemes/modern/index.js[39m[22m  199 bytes               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mthemes/inlite/theme.min.js[39m[22m     183 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                    [1m[32mthemes/modern/theme.min.js[39m[22m     181 kB               [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                        [1m[33mthemes/modern/theme.js[39m[22m     [1m[33m559 kB[39m[22m               [1m[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+                        [1m[33mthemes/inlite/theme.js[39m[22m     [1m[33m569 kB[39m[22m               [1m[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+  [36] [1m(webpack)-dev-server/client?http://0.0.0.0:8080[39m[22m 7.93 kB {[1m[33m41[39m[22m}[1m[32m [built][39m[22m
+  [39] [1m(webpack)/hot/dev-server.js[39m[22m 1.61 kB {[1m[33m41[39m[22m}[1m[32m [built][39m[22m
+  [58] [1m./src/router/router.js[39m[22m 11 kB {[1m[33m39[39m[22m}[1m[32m [built][39m[22m
+  [67] [1m(webpack)/hot/emitter.js[39m[22m 77 bytes {[1m[33m41[39m[22m}[1m[32m [built][39m[22m
+  [68] [1m./src/main.js[39m[22m 1.95 kB {[1m[33m39[39m[22m}[1m[32m [built][39m[22m
+  [86] [1m./node_modules/axios/index.js[39m[22m 40 bytes {[1m[33m40[39m[22m}[1m[32m [built][39m[22m
+  [93] [1m./node_modules/vue-router/dist/vue-router.esm.js[39m[22m 65.6 kB {[1m[33m41[39m[22m}[1m[32m [built][39m[22m
+  [99] [1m./node_modules/vue-i18n/dist/vue-i18n.common.js[39m[22m 21.8 kB {[1m[33m39[39m[22m}[1m[32m [built][39m[22m
+ [111] [1mmulti (webpack)-dev-server/client?http://0.0.0.0:8080 webpack/hot/dev-server @/main[39m[22m 52 bytes {[1m[33m39[39m[22m}[1m[32m [built][39m[22m
+ [118] [1m./node_modules/strip-ansi/index.js[39m[22m 161 bytes {[1m[33m41[39m[22m}[1m[32m [built][39m[22m
+ [235] [1mmulti (webpack)-dev-server/client?http://0.0.0.0:8080 webpack/hot/dev-server @/vendors/vendors.base.js[39m[22m 52 bytes {[1m[33m41[39m[22m}[1m[32m [built][39m[22m
+ [236] [1m./src/vendors/vendors.base.js[39m[22m 431 bytes {[1m[33m41[39m[22m}[1m[32m [built][39m[22m
+ [237] [1mmulti (webpack)-dev-server/client?http://0.0.0.0:8080 webpack/hot/dev-server @/vendors/vendors.exten.js[39m[22m 52 bytes {[1m[33m40[39m[22m}[1m[32m [built][39m[22m
+ [238] [1m./src/vendors/vendors.exten.js[39m[22m 590 bytes {[1m[33m40[39m[22m}[1m[32m [built][39m[22m
+ [247] [1m./node_modules/rasterizehtml/dist/rasterizeHTML.js[39m[22m 38.6 kB {[1m[33m40[39m[22m}[1m[32m [built][39m[22m
+    + 992 hidden modules
+Child [1mhtml-webpack-plugin for "../index.html"[39m[22m:
+     1 asset
+       [0] [1m./node_modules/html-webpack-plugin/lib/loader.js!./node_modules/html-webpack-plugin/default_index.ejs[39m[22m 538 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [1] [1m./node_modules/lodash/lodash.js[39m[22m 540 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [2] [1m(webpack)/buildin/global.js[39m[22m 509 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [3] [1m(webpack)/buildin/module.js[39m[22m 517 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?minimize!node_modules/autoprefixer-loader/index.js!src/views/my-components/markdown-editor/simplemde.min.css[39m[22m:
+       [0] [1m./node_modules/css-loader?minimize!./node_modules/autoprefixer-loader!./src/views/my-components/markdown-editor/simplemde.min.css[39m[22m 9.9 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [1] [1m./node_modules/css-loader/lib/css-base.js[39m[22m 2.26 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?minimize!node_modules/autoprefixer-loader/index.js!src/views/my-components/image-editor/cropper.min.css[39m[22m:
+       [0] [1m./node_modules/css-loader?minimize!./node_modules/autoprefixer-loader!./src/views/my-components/image-editor/cropper.min.css[39m[22m 3.91 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [1] [1m./node_modules/css-loader/lib/css-base.js[39m[22m 2.26 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+Child [1mextract-text-webpack-plugin node_modules/extract-text-webpack-plugin/dist node_modules/css-loader/index.js?minimize!node_modules/autoprefixer-loader/index.js!node_modules/iview/dist/styles/iview.css[39m[22m:
+                                    [1mAsset[39m[22m     [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m       [1mChunk Names[39m[22m
+     [1m[32m2c2ae068be3b089e0a5b59abb1831550.eot[39m[22m   121 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+     [1m[32m24712f6c47821394fba7942fbb52c3b2.ttf[39m[22m   189 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+    [1m[32m05acfdb568b3df49ad31355b19495d4a.woff[39m[22m  67.9 kB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+     [1m[33m621bd386841f74e0053cb8e67f8a0604.svg[39m[22m   [1m[33m334 kB[39m[22m        [1m[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  
+       [0] [1m./node_modules/iview/dist/styles/fonts/ionicons.eot?v=2.0.0[39m[22m 82 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [1] [1m./node_modules/css-loader?minimize!./node_modules/autoprefixer-loader!./node_modules/iview/dist/styles/iview.css[39m[22m 227 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [2] [1m./node_modules/css-loader/lib/url/escape.js[39m[22m 448 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [3] [1m./node_modules/css-loader/lib/css-base.js[39m[22m 2.26 kB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [4] [1m./node_modules/iview/dist/styles/fonts/ionicons.ttf?v=2.0.0[39m[22m 82 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [5] [1m./node_modules/iview/dist/styles/fonts/ionicons.woff?v=2.0.0[39m[22m 83 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+       [6] [1m./node_modules/iview/dist/styles/fonts/ionicons.svg?v=2.0.0[39m[22m 82 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+webpack: Compiled successfully.
+webpack: Compiling...
+
+> iview-admin@1.3.1 dev /data/www/wuxin/iview-admin
+> webpack-dev-server --content-base ./ --open --inline --hot --host 0.0.0.0 --compress --config build/webpack.dev.config.js
+
+Happy[happybabel]: Version: 4.0.1. Threads: 1 (shared pool)
+Project is running at [1m[34mhttp://0.0.0.0:8080/[39m[22m
+webpack output is served from [1m[34m/dist/[39m[22m
+Content not from webpack is served from [1m[34m/data/www/wuxin/iview-admin[39m[22m
+Happy[happybabel]: All set; signaling webpack to proceed.
+Unable to open browser. If you are running in a headless environment, please do not use the open flag.
+webpack: wait until bundle finished: /dist/main.css
+webpack: wait until bundle finished: /dist/vender-base.js
+webpack: wait until bundle finished: /dist/vender-exten.js
+webpack: wait until bundle finished: /dist/main.js

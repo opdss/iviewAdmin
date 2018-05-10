@@ -1,90 +1,103 @@
-<style lang="less">
-    @import '../../styles/common.less';
-</style>
-
 <template>
-
-    <div class="access">
-        <Row>
-            <Col span="24">
-                <Card>
-                    <p slot="title">
-                        <Icon type="android-contact"></Icon>
-                        选择权限
-                    </p>
-                    <div>
-                        <div>
-                            <Checkbox>全选</Checkbox>
-                            <div style="padding-left:40px;margin-top:10px">
-                                <CheckboxGroup v-model="checkAllGroup">
-                                    <Checkbox label="香蕉"></Checkbox>
-                                    <Checkbox label="苹果"></Checkbox>
-                                    <Checkbox label="西瓜"></Checkbox>
-                                    <div>
-                                        <Checkbox>系统</Checkbox>
-                                        <div style="padding-left:40px;margin-top:10px">
-                                            <CheckboxGroup v-model="checkAllGroup">
-                                                <Checkbox label="香蕉"></Checkbox>
-                                                <Checkbox label="苹果"></Checkbox>
-                                                <Checkbox label="西瓜"></Checkbox>
-                                                <div>
-                                                    <Checkbox>系统</Checkbox>
-                                                    <div style="padding-left:40px;margin-top:10px">
-                                                        <CheckboxGroup v-model="checkAllGroup">
-                                                            <Checkbox label="香蕉"></Checkbox>
-                                                            <Checkbox label="苹果"></Checkbox>
-                                                            <Checkbox label="西瓜"></Checkbox>
-                                                        </CheckboxGroup>
-                                                    </div>
-                                                </div>
-                                            </CheckboxGroup>
-                                        </div>
-                                    </div>
-                                    <div>
-                                                                            <Checkbox>测试</Checkbox>
-                                                                            <div style="padding-left:40px;margin-top:10px">
-                                                                                <CheckboxGroup v-model="checkAllGroup">
-                                                                                    <Checkbox label="香蕉"></Checkbox>
-                                                                                    <Checkbox label="苹果"></Checkbox>
-                                                                                    <Checkbox label="西瓜"></Checkbox>
-                                                                                    <div>
-                                                                                        <Checkbox>系统</Checkbox>
-                                                                                        <div style="padding-left:40px;margin-top:10px">
-                                                                                            <CheckboxGroup v-model="checkAllGroup">
-                                                                                                <Checkbox label="香蕉"></Checkbox>
-                                                                                                <Checkbox label="苹果"></Checkbox>
-                                                                                                <Checkbox label="西瓜"></Checkbox>
-                                                                                            </CheckboxGroup>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </CheckboxGroup>
-                                                                            </div>
-                                                                        </div>
-                                </CheckboxGroup>
-                            </div>
-                        </div>
-                    </div>
-                </Card>
-            </Col>
-        </Row>
+    <div class="padding-left-20">
+        <My-tree ref="tree" :data="treeData" show-checkbox multiple></My-tree>
+        <!--<Button @click="getValue">获取数据</Button>-->
     </div>
 </template>
+
 <script>
+    import MyTree from '../../components/myTree'
+    import Util from '@/libs/util'
+
     export default {
-            data () {
-                return {
-                    indeterminate: true,
-                    checkAll: false,
-                    checkAllGroup: ['香蕉', '西瓜'],
-                    allPermissions : []
+        name : 'permission',
+        components: { MyTree },
+        props : {
+            permOpts : {
+                type : Object,
+                default(){
+                    return {};
+                }
+            }
+        },
+        data () {
+            return {
+                treeData: [],
+                params : {}
+            }
+        },
+        methods: {
+            getData () {
+                Util.ajax.get('/system/permission', {params:this.params}).then((res) => {
+                    let data = this.genCheckBox(res.data.data.permissions);
+                    //console.log(this.genCheckBox(this.allPermissions));
+                    if (data.length>0) {
+                        this.treeData = [{
+                                'title':'全选',
+                            expand: true,
+                            selected: true,
+                                'children':data
+                            }]
+                    }
+                    console.log((this.treeData));
+                })
+            },
+            genCheckBox(cbs){
+                var ret = [];
+                if (this.type(cbs) == 'object') {
+                    for (var key in cbs) {
+                        let obj = {'title':key, "expand":true, 'children' : []};
+                        obj['children'] = this.genCheckBox(cbs[key]);
+                        ret.push(obj);
+                    }
+                } else {
+                    for(var i=0,l=cbs.length;i<l;i++){
+                        let obj = {'title':cbs[i].name, "expand":true, 'id':cbs[i].pid, 'checked':cbs[i].has?cbs[i].has:false};
+                        ret.push(obj)
+                    }
+                }
+                return ret;
+            },
+            getPermValue(){
+                var arr = this.$refs['tree'].getCheckedNodes();
+                var perm = [];
+                for(var k in arr) {
+                    if (arr[k]['id']) {
+                        perm.push(arr[k]['id'])
+                    }
+                }
+                return perm;
+            },
+            getValue(){
+                console.log(this.getPermValue());
+            },
+            type(obj) {
+                var toString = Object.prototype.toString;
+                var map = {
+                    '[object Boolean]': 'boolean',
+                    '[object Number]': 'number',
+                    '[object String]': 'string',
+                    '[object Function]': 'function',
+                    '[object Array]': 'array',
+                    '[object Date]': 'date',
+                    '[object RegExp]': 'regExp',
+                    '[object Undefined]': 'undefined',
+                    '[object Null]': 'null',
+                    '[object Object]': 'object'
+                };
+                return map[toString.call(obj)];
+            }
+        },
+        watch : {
+            permOpts() {
+                if (this.permOpts) {
+                    this.params = this.permOpts;
+                    this.getData();
                 }
             },
-            methods: {
-              getData () {
-                Util.ajax.get('/system/permission').then((res) => {
-                  this.allPermissions = res.data.data
-                })
-              },
-            }
+        },
+        created(){
+            this.getData();
         }
+    }
 </script>

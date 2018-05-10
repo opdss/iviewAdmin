@@ -127,18 +127,21 @@ util.ajax.interceptors.response.use(function (response) {
                 })
                 break;
             case 403:
-                _this.$router.push({
-                    name: 'error-403'
+                _this.$Notice.error({
+                    'title':'响应403',
+                    'desc' : '你没有该接口先相关权限，请联系管理员添加！'
                 })
                 break;
             case 404:
                 _this.$router.push({
-                    name: 'error-404'
+                    'title':'请求地址错误，如需帮助，请联系开发人员！',
+                    'desc' : ''
                 })
                 break;
             case 500:
-                _this.$router.push({
-                    name: 'error-500'
+                _this.$Notice.error({
+                    'title':'服务器内部错误！',
+                    'desc' : '请联系开发人员处理'
                 })
                 break;
         }

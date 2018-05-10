@@ -89,13 +89,6 @@ export const appRouter = [
         component: Main,
         children: [
             {
-                path: 'access',
-                title: '权限管理',
-                name: 'access',
-                icon: 'key',
-                component: () => import('@/views/access/access.vue')
-            },
-            {
                 path: 'permission',
                 title: '我的权限',
                 name: 'permission',
@@ -107,6 +100,7 @@ export const appRouter = [
                 title: ' 角色管理',
                 name: 'role',
                 icon: 'key',
+                permission: 'system.role.index',
                 component: () => import('@/views/system/role.vue')
             },
             {
@@ -114,7 +108,7 @@ export const appRouter = [
                 title: '系统设置',
                 name: 'config',
                 icon: 'settings',
-                access: 1,
+                permission: 'system.config.index',
                 component: () => import('@/views/system/config.vue')
             },
             {
@@ -122,8 +116,41 @@ export const appRouter = [
                 title: '用户管理',
                 name: 'user',
                 icon: 'person-stalker',
-                access: 1,
+                permission: 'system.user.index',
                 component: () => import('@/views/system/user.vue')
+            }
+        ]
+    },
+    {
+        path: '/develop',
+        icon: 'ios-grid-view',
+        name: 'develop',
+        title: '开发者',
+        component: Main,
+        children: [
+            {
+                path: 'logs',
+                title: '日志',
+                name: 'logs',
+                icon: 'key',
+                //permission: 'develop.logs',
+                component: () => import('@/views/gushici/article.vue')
+            },
+            {
+                path: 'runjs',
+                title: '运行js',
+                name: 'runjs',
+                icon: 'settings',
+                //permission: 'develop.runjs',
+                component: () => import('@/views/develop/runjs.vue')
+            },
+            {
+                path: 'runphp',
+                title: '运行php',
+                name: 'runphp',
+                icon: 'settings',
+                //permission: 'develop.runphp',
+                component: () => import('@/views/develop/runphp.vue')
             }
         ]
     },

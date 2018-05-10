@@ -237,6 +237,7 @@ export default {
                 item = Object.assign({}, item, {
                     "load": (item.expanded ? true : false)
                 });
+                console.log(item);
                 this.initItems.push(item);
                 if (item.children && item.expanded) {
                     this.initData(item.children, level + 1, item);

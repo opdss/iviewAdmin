@@ -1,0 +1,50 @@
+<style lang="less">
+    @import '../../styles/common.less';
+</style>
+
+<template>
+    <perm-ckb
+            itemsName="全选"
+            :items="allPermissions"
+    ></perm-ckb>
+</template>
+<script>
+    import PermCkb from '../../components/PermCkb'
+    import Util from '@/libs/util'
+    export default {
+            data () {
+                return {
+                    allPermissions : {}
+                }
+            },
+        components: {
+            PermCkb
+        },
+            methods: {
+              getData () {
+                Util.ajax.get('/system/permission').then((res) => {
+                  this.allPermissions = res.data.data.permissions;
+                  //console.log(this.genCheckBox(this.allPermissions));
+                  //console.log((this.allPermissions));
+                })
+              },
+              genCheckBox(cbs){
+                var ret = '';
+                if (cbs.constructor == Object) {
+                    for (var key in cbs) {
+                        let tt = this.genCheckBox(cbs[key]);
+                        ret += key + '=>' + tt;
+                    }
+                } else {
+                    for(var i=0,l=cbs.length;i<l;i++){
+                         ret += cbs[i].name + '|'+cbs[i].pid;
+                    }
+                }
+                return ret;
+              }
+            },
+            created(){
+                this.getData();
+            }
+        }
+</script>
